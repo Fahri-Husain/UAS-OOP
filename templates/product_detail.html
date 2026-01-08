@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail Produk</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-btn">← Kembali ke Daftar</a>
+        
+        <div class="product-detail">
+            <img src="{{ product.image }}" alt="{{ product.title }}">
+            <div class="info">
+                <h1>{{ product.title }}</h1>
+                <p class="price">Harga: ${{ product.price }}</p>
+                <p class="category">Kategori: {{ product.category }}</p>
+                <p class="rating">Rating: {{ product.rating.rate }} ({{ product.rating.count }} ulasan)</p>
+                <p class="description">{{ product.description }}</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

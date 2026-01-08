@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid Produk */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Kartu Produk */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 10px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.price {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+/* Halaman Detail */
+.back-btn {
+    display: inline-block;
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.product-detail img {
+    flex: 1;
+    max-width: 400px;
+    object-fit: contain;
+    padding: 30px;
+}
+
+.product-detail .info {
+    flex: 2;
+    padding: 40px;
+}
+
+.product-detail h1 {
+    text-align: left;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #555;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.category, .rating {
+    color: #7f8c8d;
+    font-size: 18px;
+    margin: 10px 0;
+}

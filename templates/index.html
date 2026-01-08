@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Produk Elektronik</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 Toko Elektronik Online</h1>
+        <p>Menampilkan produk elektronik dari Fake Store API</p>
+        
+        <div class="product-grid">
+            {% for product in products %}
+            <div class="product-card">
+                <img src="{{ product.image }}" alt="{{ product.title }}">
+                <h3>{{ product.title }}</h3>
+                <p class="price">${{ product.price }}</p>
+                <a href="{{ url_for('product_detail', product_id=product.id) }}" class="btn">
+                    Lihat Detail
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
